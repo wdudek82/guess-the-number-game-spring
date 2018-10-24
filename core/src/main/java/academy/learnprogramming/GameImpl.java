@@ -3,6 +3,9 @@ package academy.learnprogramming;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class GameImpl implements Game {
 
     // == constant
@@ -18,7 +21,13 @@ public class GameImpl implements Game {
     private int remainingGuesses;
     private boolean validNumberRange = true;
 
-    // == public methods
+    // Constructor Based Dependency Injection
+    // public GameImpl(NumberGenerator numberGenertor) {
+    //     this.numberGenerator = numberGenertor;
+    // }
+
+    // == init ==
+    @PostConstruct
     @Override
     public void reset() {
         smallest = 0;
@@ -27,6 +36,17 @@ public class GameImpl implements Game {
         biggest = numberGenerator.getMaxNumber();
         number = numberGenerator.next();
         log.debug("the number is {}", number);
+    }
+
+    @PreDestroy
+    public void preDestroy() {
+        log.info("in Game preDestroy()");
+    }
+
+    // Setter Based Dependency Injection
+    // == public methods
+    public void setNumberGenerator(NumberGenerator numberGenerator) {
+        this.numberGenerator = numberGenerator;
     }
 
     @Override

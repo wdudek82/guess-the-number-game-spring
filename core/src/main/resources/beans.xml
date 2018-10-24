@@ -6,4 +6,16 @@
 
     <bean id="numberGenerator" class="academy.learnprogramming.NumberGeneratorImpl"/>
 
+    <!--  Constructor Based Dependency Injection -->
+    <!--<bean id="game" class="academy.learnprogramming.GameImpl">-->
+        <!--<constructor-arg ref="numberGenerator"/>-->
+    <!--</bean>-->
+
+    <!-- Setter Based Dependency Injection -->
+    <bean id="game" class="academy.learnprogramming.GameImpl">
+        <property name="numberGenerator" ref="numberGenerator"/>
+    </bean>
+
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+
 </beans>

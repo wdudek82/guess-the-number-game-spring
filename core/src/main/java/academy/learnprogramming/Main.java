@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
         log.info("Guess The Number Game");
 
-        // create context (container)
+        // get number generator bean from context (container)
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(CONFIG_LOCATION);
 
         NumberGenerator numberGenerator = context.getBean("numberGenerator", NumberGenerator.class);
@@ -24,6 +24,9 @@ public class Main {
 
         // log generated number
         log.info("number = {}", number);
+
+        // get game bean from context (container)
+        Game game = context.getBean(GameImpl.class);
 
         // close context (container)
         context.close();
