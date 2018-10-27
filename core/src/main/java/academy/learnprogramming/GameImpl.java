@@ -26,16 +26,11 @@ public class GameImpl implements Game {
     private int remainingGuesses;
     private boolean validNumberRange = true;
 
-    // Constructor Based Dependency Injection
-    // public GameImpl(NumberGenerator numberGenertor) {
-    //     this.numberGenerator = numberGenertor;
-    // }
-
     // == init ==
     @PostConstruct
     @Override
     public void reset() {
-        smallest = 0;
+        smallest = numberGenerator.getMinNumber();
         guess = 0;
         remainingGuesses = guessCount;
         biggest = numberGenerator.getMaxNumber();
@@ -47,12 +42,6 @@ public class GameImpl implements Game {
     public void preDestroy() {
         log.info("in Game preDestroy()");
     }
-
-    // // Setter Based Dependency Injection
-    // // == public methods
-    // public void setNumberGenerator(NumberGenerator numberGenerator) {
-    //     this.numberGenerator = numberGenerator;
-    // }
 
     @Override
     public int getGuessCount() {
