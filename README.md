@@ -1,3 +1,3 @@
-# Guess the Number Game (Java/Spring)
+# Guess the Number Game (Java/Spring Boot)
 
 ...
