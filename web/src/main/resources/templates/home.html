@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/head::headFragment}">
+<head th:replace="~{fragments/_head::headFragment}">
   <meta charset="UTF-8">
   <title>Title content</title>
 </head>
@@ -14,6 +14,10 @@
           href="play.html"
       >Click to Play</a>
     </h3>
+
+    <footer th:replace="~{fragments/_footer::footerFragment}">
+      <p>Created by ...</p>
+    </footer>
   </div>
 </body>
 </html>

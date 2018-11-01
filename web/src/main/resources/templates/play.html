@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/head::headFragment}">
+<head th:replace="~{fragments/_head::headFragment}">
   <meta charset="UTF-8">
   <title>Title content</title>
 </head>
@@ -21,8 +21,8 @@
       <input type="submit" value="Submit"/>
     </form>
 
-    <footer>
-      <p>Created by the Learn Programming Academy</p>
+    <footer th:replace="~{fragments/_footer::footerFragment}">
+      <p>Created by ...</p>
     </footer>
   </div>
 
