@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/_head::headFragment}">
+<head id="headId">
   <meta charset="UTF-8">
   <title>Title content</title>
 </head>
@@ -9,7 +9,7 @@
   <div align="center">
     <h1>Guess the Number Game</h1>
     <h2>Game Over</h2>
-    <h3 th:text="${__${T(academy.learnprogramming.util.AttributeNames).RESULT_MESSAGE}__}">
+    <h3 id="result-messageId">
       Result Message Content
     </h3>
 
