@@ -1,0 +1,8 @@
+<thlogic>
+  <attr sel="#restart"
+      th:href="@{__${T(academy.learnprogramming.util.GameMappings).RESTART}__}"/>
+  <attr sel="#home"
+      th:href="@{__${T(academy.learnprogramming.util.GameMappings).HOME}__}"/>
+  <attr sel="footer"
+      th:replace="~{fragments/_footer::footerFragment}"/>
+</thlogic>

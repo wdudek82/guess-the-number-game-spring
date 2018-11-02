@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head id="headId">
   <meta charset="UTF-8">
   <title>Title content</title>
@@ -14,22 +14,14 @@
     </h3>
 
     <h3>
-      <a
-          th:href="@{__${T(academy.learnprogramming.util.GameMappings).RESTART}__}"
-      >
-        Play Again
-      </a>
+      <a id="restart">Play Again</a>
     </h3>
 
     <h3>
-      <a
-          th:href="@{__${T(academy.learnprogramming.util.GameMappings).HOME}__}"
-      >
-        Home
-      </a>
+      <a id="home">Home</a>
     </h3>
 
-    <footer th:replace="~{fragments/_footer::footerFragment}">
+    <footer>
       <p>Created by ...</p>
     </footer>
   </div>
