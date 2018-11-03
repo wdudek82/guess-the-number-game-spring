@@ -3,12 +3,11 @@
       sel="head"
       th:replace="~{fragments/_head::headFragment}"
   />
+  <attr sel="#welcome" th:text="#{game.welcome}"/>
   <attr
       sel="#play-game"
       th:href="@{__${T(academy.learnprogramming.util.GameMappings).PLAY}__}"
-      th:text="Play"
-
-  />
+      th:text="#{game.play}"/>
   <attr
       sel="footer"
       th:replace="~{fragments/_footer::footerFragment}"
