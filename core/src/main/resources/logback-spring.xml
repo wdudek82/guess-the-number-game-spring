@@ -1,9 +1,10 @@
 <configuration>
 
-    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+  <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
-    <logger name="academy.learnprogramming" level="DEBUG"/>
-    <logger name="org.springframework" level="INFO"/>
-    <logger name="org.thymeleaf" level="INFO"/>
+  <logger name="academy.learnprogramming" level="DEBUG"/>
+  <logger name="org.springframework" level="DEBUG"/>
+  <logger name="org.springframework" level="INFO"/>
+  <logger name="org.thymeleaf" level="INFO"/>
 
 </configuration>
